@@ -1,6 +1,6 @@
 //
-//  beer_like_buttonApp.swift
-//  beer-like-button
+//  BeerButtonApp.swift
+//  BeerButtonApp
 //
 //  Created by Francesco Marini on 24/05/22.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct beer_like_buttonApp: App {
+struct BeerButtonApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

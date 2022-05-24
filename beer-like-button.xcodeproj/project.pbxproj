@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		138A2413283D46A9001DA58B /* beer_like_buttonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A2412283D46A9001DA58B /* beer_like_buttonApp.swift */; };
+		138A2413283D46A9001DA58B /* BeerButtonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A2412283D46A9001DA58B /* BeerButtonApp.swift */; };
 		138A2415283D46A9001DA58B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A2414283D46A9001DA58B /* ContentView.swift */; };
 		138A2417283D46AC001DA58B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 138A2416283D46AC001DA58B /* Assets.xcassets */; };
 		138A241A283D46AC001DA58B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 138A2419283D46AC001DA58B /* Preview Assets.xcassets */; };
+		138A2422283D4E4C001DA58B /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A2421283D4E4C001DA58B /* Color+Ext.swift */; };
+		138A2424283D504E001DA58B /* BeerButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A2423283D504E001DA58B /* BeerButtonViewModel.swift */; };
+		138A2426283D790F001DA58B /* BubblesGeometryEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A2425283D790F001DA58B /* BubblesGeometryEffect.swift */; };
+		138A2428283D7E5D001DA58B /* BubblesModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A2427283D7E5D001DA58B /* BubblesModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		138A240F283D46A9001DA58B /* beer-like-button.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beer-like-button.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		138A2412283D46A9001DA58B /* beer_like_buttonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beer_like_buttonApp.swift; sourceTree = "<group>"; };
+		138A2412283D46A9001DA58B /* BeerButtonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerButtonApp.swift; sourceTree = "<group>"; };
 		138A2414283D46A9001DA58B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		138A2416283D46AC001DA58B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		138A2419283D46AC001DA58B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		138A2421283D4E4C001DA58B /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		138A2423283D504E001DA58B /* BeerButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerButtonViewModel.swift; sourceTree = "<group>"; };
+		138A2425283D790F001DA58B /* BubblesGeometryEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesGeometryEffect.swift; sourceTree = "<group>"; };
+		138A2427283D7E5D001DA58B /* BubblesModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +59,11 @@
 		138A2411283D46A9001DA58B /* beer-like-button */ = {
 			isa = PBXGroup;
 			children = (
-				138A2412283D46A9001DA58B /* beer_like_buttonApp.swift */,
+				138A2420283D4E33001DA58B /* Extensions */,
+				138A2412283D46A9001DA58B /* BeerButtonApp.swift */,
+				138A2423283D504E001DA58B /* BeerButtonViewModel.swift */,
+				138A2425283D790F001DA58B /* BubblesGeometryEffect.swift */,
+				138A2427283D7E5D001DA58B /* BubblesModifier.swift */,
 				138A2414283D46A9001DA58B /* ContentView.swift */,
 				138A2416283D46AC001DA58B /* Assets.xcassets */,
 				138A2418283D46AC001DA58B /* Preview Content */,
@@ -65,6 +77,14 @@
 				138A2419283D46AC001DA58B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		138A2420283D4E33001DA58B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				138A2421283D4E4C001DA58B /* Color+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +158,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				138A2415283D46A9001DA58B /* ContentView.swift in Sources */,
-				138A2413283D46A9001DA58B /* beer_like_buttonApp.swift in Sources */,
+				138A2413283D46A9001DA58B /* BeerButtonApp.swift in Sources */,
+				138A2424283D504E001DA58B /* BeerButtonViewModel.swift in Sources */,
+				138A2426283D790F001DA58B /* BubblesGeometryEffect.swift in Sources */,
+				138A2428283D7E5D001DA58B /* BubblesModifier.swift in Sources */,
+				138A2422283D4E4C001DA58B /* Color+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
