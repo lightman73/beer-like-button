@@ -14,16 +14,14 @@ struct BubblesModifier: ViewModifier {
     private let duration: Double = 2
     
     func body(content: Content) -> some View {
-        ZStack {
-            content
-                .scaleEffect(scale)
-                .modifier(BubblesGeometryEffect(time: time))
-                .opacity(0.1 + 0.9 * ((duration - time) / duration))
-        }
-        .onAppear {
-            withAnimation (.easeOut(duration: duration)) {
-                self.time = duration
+        content
+            .scaleEffect(scale)
+            .modifier(BubblesGeometryEffect(time: time))
+            .opacity(0.1 + 0.9 * ((duration - time) / duration))
+            .onAppear {
+                withAnimation (.easeOut(duration: duration)) {
+                    self.time = duration
+                }
             }
-        }
     }
 }
