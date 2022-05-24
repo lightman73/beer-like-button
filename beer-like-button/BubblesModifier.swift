@@ -18,7 +18,7 @@ struct BubblesModifier: ViewModifier {
             content
                 .scaleEffect(scale)
                 .modifier(BubblesGeometryEffect(time: time))
-                .opacity(((duration-time) / duration))
+                .opacity(0.1 + 0.9 * ((duration - time) / duration))
         }
         .onAppear {
             withAnimation (.easeOut(duration: duration)) {
