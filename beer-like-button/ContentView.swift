@@ -22,14 +22,14 @@ struct ContentView: View {
                 // Counter
                 ZStack {
                     Text("\(viewModel.beers)")
-                        .font(.title3)
+                        .font(.title)
                         .fontWeight(.semibold)
 
                     Text("+1")
-                        .font(.title3)
+                        .font(.title2)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
-                        .padding(8)
+                        .padding(viewModel.beers > 99 ? 12 : 8)
                         .background(Color.brandPrimary)
                         .clipShape(Circle())
                         .opacity(viewModel.plusOneOpacity)
