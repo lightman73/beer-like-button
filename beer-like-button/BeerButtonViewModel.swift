@@ -22,7 +22,7 @@ fileprivate struct Constants {
 
 
 @MainActor final class BeerButtonViewModel: ObservableObject {
-    @Published var beers = 42
+    @Published var beers = 0
     @Published var shouldShowBubbles = false
     @Published var plusOneOpacity = Constants.minPlusOneOpacity
     @Published var plusOneOffset = Constants.minPlusOneOffset
