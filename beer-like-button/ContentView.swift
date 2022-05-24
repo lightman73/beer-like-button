@@ -5,6 +5,10 @@
 //  Created by Francesco Marini on 24/05/22.
 //
 
+/// See https://dribbble.com/shots/10222297-Beer-Like
+/// for reference design
+
+
 import SwiftUI
 
 struct ContentView: View {
@@ -12,8 +16,8 @@ struct ContentView: View {
     
     private let numberOfBubbles = 20
     
-    /// See https://dribbble.com/shots/10222297-Beer-Like
-    /// for reference design
+    // Set to 1.0 to better view the animations ;)
+    private let buttonScale = 0.5
     
     var body: some View {
         ZStack {
@@ -78,7 +82,7 @@ struct ContentView: View {
                 }
             }
         }
-        .scaleEffect(0.5)
+        .scaleEffect(buttonScale)
         .onTapGesture {
             viewModel.buttonTapped()
         }
