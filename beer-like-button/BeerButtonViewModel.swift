@@ -37,6 +37,7 @@ fileprivate struct Constants {
             // Should reset the animation, ideally
             return
         }
+        isAnimating = true
         
         beers += 1
         
@@ -90,6 +91,7 @@ fileprivate struct Constants {
             self.shouldShowBubbles = false
             self.plusOneOffset = Constants.minPlusOneOffset
             self.plusOneScale = Constants.minPlusOneScale
+            self.isAnimating = false
         }
     }
 }
