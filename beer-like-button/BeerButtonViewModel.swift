@@ -11,7 +11,7 @@ fileprivate struct Constants {
     static let minMugAngle = 10.1
     static let maxMugAngle = 29.95
     static let minBeersCircleShadowRadius = 2.0
-    static let maxBeersCircleShadowRadius = 2.0
+    static let maxBeersCircleShadowRadius = 8.0
     static let minPlusOneOpacity = 0.0
     static let maxPlusOneOpacity = 1.0
     static let minPlusOneOffset = 0.0
