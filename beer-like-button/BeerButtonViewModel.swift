@@ -11,7 +11,9 @@ fileprivate struct Constants {
     static let minMugAngle = 10.1
     static let maxMugAngle = 29.95
     static let minBeersCircleShadowRadius = 2.0
-    static let maxBeersCircleShadowRadius = 8.0
+    static let maxBeersCircleShadowRadius = 10.0
+    static let normalBeersCircleShadowColor = Color.black
+    static let animatingBeersCircleShadowColor = Color.brandPrimary
     static let minPlusOneOpacity = 0.0
     static let maxPlusOneOpacity = 1.0
     static let minPlusOneOffset = 0.0
@@ -29,6 +31,7 @@ fileprivate struct Constants {
     @Published var plusOneScale = Constants.minPlusOneScale
     @Published var beersCircleShadowRadius = Constants.maxBeersCircleShadowRadius
     @Published var mugAngle = Constants.minMugAngle
+    @Published var beersCircleShadowColor = Constants.normalBeersCircleShadowColor
     
     private var isAnimating = false
     
@@ -61,11 +64,13 @@ fileprivate struct Constants {
         
         
         // Beers clapping animation
-        withAnimation(.easeIn(duration: 0.2)) {
+        withAnimation(.easeIn(duration: 0.25)) {
             beersCircleShadowRadius = Constants.minBeersCircleShadowRadius
+            beersCircleShadowColor = Constants.animatingBeersCircleShadowColor
         }
-        withAnimation(.easeOut(duration: 0.2).delay(0.2)) {
+        withAnimation(.easeOut(duration: 0.25).delay(0.3)) {
             beersCircleShadowRadius = Constants.maxBeersCircleShadowRadius
+            beersCircleShadowColor = Constants.normalBeersCircleShadowColor
         }
         withAnimation(.easeIn(duration: 0.35)) {
             mugAngle = Constants.maxMugAngle
@@ -81,13 +86,12 @@ fileprivate struct Constants {
         
         
         // Bubbles
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.shouldShowBubbles = true
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-            print("Beers animation reset")
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.25) {
             self.shouldShowBubbles = false
             self.plusOneOffset = Constants.minPlusOneOffset
             self.plusOneScale = Constants.minPlusOneScale
