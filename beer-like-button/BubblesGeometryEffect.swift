@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct BubblesGeometryEffect : GeometryEffect {
-    private static let maxAngle = 130 / 180 * Double.pi
-    private static let minAngle = 70 / 180 * Double.pi
+    private static let maxAngle = 120 / 180 * Double.pi
+    private static let minAngle = 85 / 180 * Double.pi
     
     var time: Double
-    private let g: Double = 98.0
+    private let g: Double = 180.0
     
     var initialAngle = Double.random(in: minAngle...maxAngle)
-    var initialSpeed = Double.random(in: 50...100)
+    var initialSpeed = Double.random(in: 80...160)
     
     var animatableData: Double {
         get { time }
